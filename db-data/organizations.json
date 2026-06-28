@@ -1,0 +1,317 @@
+[
+  {
+    "id": "org-default",
+    "name": "سلسلة مطاعم النيل",
+    "legalName": "شركة النيل للأغذية والمشروبات ذ.م.م",
+    "logo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=100&auto=format&fit=crop&q=60",
+    "primaryColor": "#4f46e5",
+    "ownerEmail": "owner@eplfood.com",
+    "ownerPassword": "owner",
+    "ownerPhone": "01012345678",
+    "plan": "growth",
+    "revenueSharePercent": 1.5,
+    "customFeatures": [
+      {
+        "key": "pos_basic",
+        "enabled": true
+      },
+      {
+        "key": "kds",
+        "enabled": true
+      },
+      {
+        "key": "menu_management",
+        "enabled": true
+      },
+      {
+        "key": "basic_reports",
+        "enabled": true
+      },
+      {
+        "key": "shift_management",
+        "enabled": true
+      },
+      {
+        "key": "delivery_management",
+        "enabled": true
+      },
+      {
+        "key": "guest_portal",
+        "enabled": true
+      },
+      {
+        "key": "cost_control",
+        "enabled": true
+      },
+      {
+        "key": "inventory",
+        "enabled": true
+      },
+      {
+        "key": "multi_branch",
+        "enabled": true
+      }
+    ],
+    "billingCycle": "monthly",
+    "nextBillingDate": "2026-07-27T15:49:42.704Z",
+    "paymentStatus": "active",
+    "totalRevenueShareOwed": 145001,
+    "totalRevenueSharePaid": 75000,
+    "status": "active",
+    "maxBranches": 3,
+    "maxUsers": 20,
+    "maxMenuItems": 200,
+    "createdBy": "system",
+    "createdAt": "2026-06-27T15:49:42.704Z",
+    "updatedAt": "2026-06-27T15:49:42.704Z",
+    "lastActiveAt": "2026-06-27T15:49:42.704Z"
+  },
+  {
+    "id": "org-starter",
+    "name": "كافيه الأميرة",
+    "legalName": "كافيه الأميرة السياحي",
+    "logo": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=100&auto=format&fit=crop&q=60",
+    "primaryColor": "#ec4899",
+    "ownerEmail": "starter@eplfood.com",
+    "ownerPassword": "owner",
+    "ownerPhone": "01198765432",
+    "plan": "starter",
+    "revenueSharePercent": 1,
+    "customFeatures": [
+      {
+        "key": "pos_basic",
+        "enabled": true
+      },
+      {
+        "key": "kds",
+        "enabled": true
+      },
+      {
+        "key": "menu_management",
+        "enabled": true
+      },
+      {
+        "key": "basic_reports",
+        "enabled": true
+      },
+      {
+        "key": "shift_management",
+        "enabled": true
+      }
+    ],
+    "billingCycle": "monthly",
+    "nextBillingDate": "2026-07-27T15:49:42.704Z",
+    "paymentStatus": "active",
+    "totalRevenueShareOwed": 32000,
+    "totalRevenueSharePaid": 0,
+    "status": "active",
+    "maxBranches": 1,
+    "maxUsers": 5,
+    "maxMenuItems": 50,
+    "createdBy": "system",
+    "createdAt": "2026-06-27T15:49:42.704Z",
+    "updatedAt": "2026-06-27T15:49:42.704Z",
+    "lastActiveAt": "2026-06-27T15:49:42.704Z"
+  },
+  {
+    "id": "org-1782587489953",
+    "name": "Test Restaurant",
+    "legalName": "Test Restaurant LLC",
+    "logo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=100&auto=format&fit=crop&q=60",
+    "primaryColor": "#4f46e5",
+    "ownerEmail": "test-owner-1782587489936@example.com",
+    "ownerPassword": "password123",
+    "ownerPhone": "01001234567",
+    "plan": "growth",
+    "revenueSharePercent": 1.5,
+    "customFeatures": [
+      {
+        "key": "pos_basic",
+        "enabled": true
+      },
+      {
+        "key": "kds",
+        "enabled": true
+      },
+      {
+        "key": "menu_management",
+        "enabled": true
+      },
+      {
+        "key": "basic_reports",
+        "enabled": true
+      },
+      {
+        "key": "shift_management",
+        "enabled": true
+      },
+      {
+        "key": "delivery_management",
+        "enabled": true
+      },
+      {
+        "key": "guest_portal",
+        "enabled": true
+      },
+      {
+        "key": "cost_control",
+        "enabled": true
+      },
+      {
+        "key": "inventory",
+        "enabled": true
+      },
+      {
+        "key": "multi_branch",
+        "enabled": true
+      }
+    ],
+    "billingCycle": "monthly",
+    "nextBillingDate": "2026-07-27T19:11:29.953Z",
+    "paymentStatus": "active",
+    "totalRevenueShareOwed": 0,
+    "totalRevenueSharePaid": 0,
+    "status": "active",
+    "maxBranches": 3,
+    "maxUsers": 20,
+    "maxMenuItems": 200,
+    "createdBy": "super_admin",
+    "createdAt": "2026-06-27T19:11:29.953Z",
+    "updatedAt": "2026-06-27T19:11:29.953Z",
+    "lastActiveAt": "2026-06-27T19:11:29.953Z"
+  },
+  {
+    "id": "org-1782587612195",
+    "name": "oko",
+    "legalName": "gjoigjwio",
+    "logo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=100&auto=format&fit=crop&q=60",
+    "primaryColor": "#4f46e5",
+    "ownerEmail": "mahmoudgameil732@gmail.com",
+    "ownerPassword": "owner",
+    "ownerPhone": "01080128373",
+    "plan": "growth",
+    "revenueSharePercent": 1.5,
+    "customFeatures": [
+      {
+        "key": "pos_basic",
+        "enabled": true
+      },
+      {
+        "key": "kds",
+        "enabled": true
+      },
+      {
+        "key": "menu_management",
+        "enabled": true
+      },
+      {
+        "key": "basic_reports",
+        "enabled": true
+      },
+      {
+        "key": "shift_management",
+        "enabled": true
+      },
+      {
+        "key": "delivery_management",
+        "enabled": true
+      },
+      {
+        "key": "guest_portal",
+        "enabled": true
+      },
+      {
+        "key": "cost_control",
+        "enabled": true
+      },
+      {
+        "key": "inventory",
+        "enabled": true
+      },
+      {
+        "key": "multi_branch",
+        "enabled": true
+      }
+    ],
+    "billingCycle": "monthly",
+    "nextBillingDate": "2026-07-27T19:13:32.195Z",
+    "paymentStatus": "active",
+    "totalRevenueShareOwed": 0,
+    "totalRevenueSharePaid": 0,
+    "status": "active",
+    "maxBranches": 3,
+    "maxUsers": 20,
+    "maxMenuItems": 200,
+    "createdBy": "super_admin",
+    "createdAt": "2026-06-27T19:13:32.195Z",
+    "updatedAt": "2026-06-27T19:13:32.195Z",
+    "lastActiveAt": "2026-06-27T19:13:32.195Z"
+  },
+  {
+    "id": "org-1782588136764",
+    "name": "Test Restaurant",
+    "legalName": "Test Restaurant LLC",
+    "logo": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=100&auto=format&fit=crop&q=60",
+    "primaryColor": "#4f46e5",
+    "ownerEmail": "test-owner-1782588136747@example.com",
+    "ownerPassword": "owner",
+    "ownerPhone": "01012345678",
+    "plan": "growth",
+    "revenueSharePercent": 1.5,
+    "customFeatures": [
+      {
+        "key": "pos_basic",
+        "enabled": true
+      },
+      {
+        "key": "kds",
+        "enabled": true
+      },
+      {
+        "key": "menu_management",
+        "enabled": true
+      },
+      {
+        "key": "basic_reports",
+        "enabled": true
+      },
+      {
+        "key": "shift_management",
+        "enabled": true
+      },
+      {
+        "key": "delivery_management",
+        "enabled": true
+      },
+      {
+        "key": "guest_portal",
+        "enabled": true
+      },
+      {
+        "key": "cost_control",
+        "enabled": true
+      },
+      {
+        "key": "inventory",
+        "enabled": true
+      },
+      {
+        "key": "multi_branch",
+        "enabled": true
+      }
+    ],
+    "billingCycle": "monthly",
+    "nextBillingDate": "2026-07-27T19:22:16.764Z",
+    "paymentStatus": "active",
+    "totalRevenueShareOwed": 0,
+    "totalRevenueSharePaid": 0,
+    "status": "active",
+    "maxBranches": 3,
+    "maxUsers": 20,
+    "maxMenuItems": 200,
+    "createdBy": "super_admin",
+    "createdAt": "2026-06-27T19:22:16.764Z",
+    "updatedAt": "2026-06-27T19:22:16.764Z",
+    "lastActiveAt": "2026-06-27T19:22:16.764Z"
+  }
+]

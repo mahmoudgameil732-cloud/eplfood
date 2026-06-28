@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --color-surface-base: #ffffff;
+  --color-content-primary: #0f172a;
+  --color-content-secondary: #334155;
+  --color-border-primary: #cbd5e1;
+}
+
+body {
+  background-color: #f8fafc; /* Slate 50 light backdrop */
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom global scrollbar styling that is always visible and looks consistent */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  display: block !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9 !important; /* Slate 100 */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1 !important; /* Slate 300 */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8 !important; /* Slate 400 */
+}
+
+/* Firefox compatibility to always show scrollbars */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: #cbd5e1 #f1f5f9 !important;
+}

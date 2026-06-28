@@ -1,0 +1,515 @@
+{
+  "entities": {
+    "Tenant": {
+      "title": "Tenant",
+      "description": "A top-level subscription brand representing the client company.",
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string",
+          "description": "A unique time-sorted ULID acting as the tenant identifier."
+        },
+        "legalName": {
+          "type": "string",
+          "description": "The registered legal entity name for billing and invoices."
+        },
+        "brandName": {
+          "type": "string",
+          "description": "Public brand display name across all guest and POS portals."
+        },
+        "subscriptionPlan": {
+          "type": "string",
+          "enum": ["starter", "growth", "professional", "enterprise", "custom"]
+        },
+        "subscriptionStatus": {
+          "type": "string",
+          "enum": ["trialing", "active", "past_due", "suspended", "cancelled"]
+        },
+        "billingEmail": {
+          "type": "string",
+          "format": "email"
+        },
+        "defaultCurrency": {
+          "type": "string",
+          "description": "ISO 4217 currency code e.g. EGP, SAR, AED."
+        },
+        "defaultTimezone": {
+          "type": "string",
+          "description": "IANA timezone string e.g. Africa/Cairo."
+        },
+        "defaultLocale": {
+          "type": "string",
+          "description": "BCP 47 language and locale identifier e.g. ar-EG."
+        },
+        "supportedLocales": {
+          "type": "array",
+          "description": "Locales supported by this tenant's menu mappings."
+        },
+        "featureFlags": {
+          "type": "object",
+          "description": "Configurable map of platform features available to this tenant."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "suspendedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["tenantId", "legalName", "brandName", "subscriptionPlan", "subscriptionStatus", "billingEmail", "defaultCurrency", "createdAt"]
+    },
+    "Branch": {
+      "title": "Branch",
+      "description": "A physical location belonging to a single Tenant.",
+      "type": "object",
+      "properties": {
+        "branchId": {
+          "type": "string"
+        },
+        "tenantId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "object",
+          "description": "Multilingual name mapping."
+        },
+        "address": {
+          "type": "object"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "openingHours": {
+          "type": "object"
+        },
+        "taxNumber": {
+          "type": "string"
+        },
+        "receiptFooter": {
+          "type": "string"
+        },
+        "registers": {
+          "type": "array"
+        },
+        "kdsStations": {
+          "type": "array"
+        },
+        "deliveryZones": {
+          "type": "array"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["branchId", "tenantId", "name", "isActive", "createdAt"]
+    },
+    "SystemSettings": {
+      "title": "SystemSettings",
+      "description": "Tenant-wide configuration parameters.",
+      "type": "object",
+      "properties": {
+        "tenantId": {
+          "type": "string"
+        },
+        "defaultTaxRate": {
+          "type": "number"
+        },
+        "taxInclusivePricing": {
+          "type": "boolean"
+        },
+        "shiftVarianceThreshold": {
+          "type": "number"
+        },
+        "cashMovementPinThreshold": {
+          "type": "number"
+        },
+        "voidPinThreshold": {
+          "type": "number"
+        },
+        "refundPinRequired": {
+          "type": "boolean"
+        },
+        "receiptFormat": {
+          "type": "string",
+          "enum": ["thermal_80mm", "thermal_58mm", "a4"]
+        },
+        "loyaltyPointsPerCurrency": {
+          "type": "number"
+        },
+        "loyaltyRedemptionRate": {
+          "type": "number"
+        },
+        "foodCostTargetPercent": {
+          "type": "number"
+        },
+        "wasteReasonCodes": {
+          "type": "array"
+        },
+        "expenseCategories": {
+          "type": "array"
+        },
+        "cashMovementCategories": {
+          "type": "array"
+        },
+        "orderAutoAcceptDelay": {
+          "type": "number"
+        },
+        "defaultPrepTimeMinutes": {
+          "type": "number"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedBy": {
+          "type": "string"
+        }
+      },
+      "required": ["tenantId", "defaultTaxRate", "taxInclusivePricing", "updatedAt"]
+    },
+    "StaffUser": {
+      "title": "StaffUser",
+      "description": "Personnel records managed under security roles.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string"
+        },
+        "tenantId": {
+          "type": "string"
+        },
+        "branchId": {
+          "type": "string"
+        },
+        "allBranchIds": {
+          "type": "array"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["platform_admin", "admin", "branch_manager", "cashier", "kitchen", "rider", "hr_manager", "accountant"]
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "pin": {
+          "type": "string"
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "hireDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "terminatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "hourlyRate": {
+          "type": "number"
+        },
+        "weeklyHourTarget": {
+          "type": "number"
+        },
+        "emergencyContact": {
+          "type": "object"
+        },
+        "photoUrl": {
+          "type": "string"
+        },
+        "customClaims": {
+          "type": "object"
+        },
+        "lastLoginAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "createdBy": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "tenantId", "role", "displayName", "email", "isActive", "createdAt"]
+    },
+    "ManagerPinVerification": {
+      "title": "ManagerPinVerification",
+      "description": "Immutable security records auditing manager-approved operations.",
+      "type": "object",
+      "properties": {
+        "verificationId": {
+          "type": "string"
+        },
+        "tenantId": {
+          "type": "string"
+        },
+        "branchId": {
+          "type": "string"
+        },
+        "requestedBy": {
+          "type": "string"
+        },
+        "approvedBy": {
+          "type": "string"
+        },
+        "action": {
+          "type": "string",
+          "enum": ["void_order", "void_item", "refund", "shift_close_variance", "cash_movement", "manual_price_override", "comp_item", "force_close_shift", "staff_role_change", "expense_above_threshold"]
+        },
+        "targetDocumentId": {
+          "type": "string"
+        },
+        "approvedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "ipAddress": {
+          "type": "string"
+        }
+      },
+      "required": ["verificationId", "tenantId", "branchId", "requestedBy", "approvedBy", "action", "approvedAt"]
+    },
+    "MenuCategory": {
+      "title": "MenuCategory",
+      "description": "Menu categories with channel visibility options.",
+      "type": "object",
+      "properties": {
+        "categoryId": {
+          "type": "string"
+        },
+        "tenantId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "object"
+        },
+        "displayOrder": {
+          "type": "number"
+        },
+        "isArchived": {
+          "type": "boolean"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "availableChannels": {
+          "type": "array"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["categoryId", "tenantId", "name", "displayOrder", "isArchived", "createdAt"]
+    },
+    "MenuItem": {
+      "title": "MenuItem",
+      "description": "Full menu items, with nested modifier groups, allergens, and recipe BOM attachments.",
+      "type": "object",
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "tenantId": {
+          "type": "string"
+        },
+        "branchId": {
+          "type": "string"
+        },
+        "categoryId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "object"
+        },
+        "description": {
+          "type": "object"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "displayOrder": {
+          "type": "number"
+        },
+        "basePrice": {
+          "type": "integer"
+        },
+        "channelPricing": {
+          "type": "object"
+        },
+        "taxRate": {
+          "type": "number"
+        },
+        "recipeBomId": {
+          "type": "string"
+        },
+        "theoreticalCostPrice": {
+          "type": "integer"
+        },
+        "foodCostPercent": {
+          "type": "number"
+        },
+        "isAvailable": {
+          "type": "boolean"
+        },
+        "availableChannels": {
+          "type": "array"
+        },
+        "kdsStation": {
+          "type": "string",
+          "enum": ["grill", "fryer", "cold", "drinks", "expo"]
+        },
+        "prepTimeMinutes": {
+          "type": "number"
+        },
+        "modifierGroups": {
+          "type": "array"
+        },
+        "allergens": {
+          "type": "array"
+        },
+        "isArchived": {
+          "type": "boolean"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["itemId", "tenantId", "categoryId", "name", "basePrice", "isAvailable", "isArchived", "createdAt"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Immutable sales ledger records mapping POS, delivery, or aggregator sources.",
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "type": "string"
+        },
+        "tenantId": {
+          "type": "string"
+        },
+        "branchId": {
+          "type": "string"
+        },
+        "orderNumber": {
+          "type": "integer"
+        },
+        "idempotencyKey": {
+          "type": "string"
+        },
+        "fulfillmentType": {
+          "type": "string",
+          "enum": ["dine_in", "takeaway", "delivery"]
+        },
+        "orderSource": {
+          "type": "string",
+          "enum": ["pos", "guest_portal", "kiosk", "aggregator_talabat", "aggregator_careem", "aggregator_hungerstation", "aggregator_other"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["new", "confirmed", "preparing", "ready_for_rider", "ready_for_pickup", "rider_assigned", "picked_up", "delivered", "completed", "cancelled", "voided", "refunded"]
+        },
+        "tableId": {
+          "type": "string"
+        },
+        "cashierId": {
+          "type": "string"
+        },
+        "shiftId": {
+          "type": "string"
+        },
+        "totalAmount": {
+          "type": "integer"
+        },
+        "totalPaid": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["orderId", "tenantId", "branchId", "orderNumber", "fulfillmentType", "orderSource", "status", "totalAmount", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/tenants/{tenantId}": {
+      "schema": "Tenant",
+      "description": "Tenant enterprise branding & feature definitions"
+    },
+    "/branches/{branchId}": {
+      "schema": "Branch",
+      "description": "Physical retail branch structures"
+    },
+    "/system_settings/{tenantId}": {
+      "schema": "SystemSettings",
+      "description": "Tenant settings parameters"
+    },
+    "/staff_users/{uid}": {
+      "schema": "StaffUser",
+      "description": "Unified personnel profile records"
+    },
+    "/manager_pin_verifications/{verificationId}": {
+      "schema": "ManagerPinVerification",
+      "description": "Security overrides audit entries"
+    },
+    "/menu_categories/{categoryId}": {
+      "schema": "MenuCategory",
+      "description": "Multilingual food categories"
+    },
+    "/menu_items/{itemId}": {
+      "schema": "MenuItem",
+      "description": "Retail food and modifier specs"
+    },
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Immutable financial checkout logs"
+    }
+  }
+}

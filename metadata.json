@@ -1,0 +1,6 @@
+{
+  "name": "SaaS Restaurant Hub",
+  "description": "A high-performance, full-stack multi-portal restaurant SaaS platform featuring a customer self-service menu/ordering app, a real-time waiter & kitchen dispatch console, an owner analytics dashboard, and a Gemini-powered AI menu generator and marketing planner.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
