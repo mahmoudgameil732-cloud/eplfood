@@ -1907,7 +1907,7 @@ export default function StaffPortal({ tables, orders, onRefreshOrders, onRefresh
                               onClick={() => setLayoutMode("split")}
                               className={`px-2.5 py-1 rounded-md font-bold transition-all ${layoutMode === "split" ? "bg-slate-900 text-white shadow-xs" : "text-slate-400 hover:text-white"}`}
                             >
-                              Split Panels (>=1440px)
+                              Split Panels ({'>='}1440px)
                             </button>
                           </div>
                         </div>
